@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3定位 - position定位</title>
+		<meta charset='utf-8'/>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			div{
+				width:100px;
+				height:100px;
+			}
+			#one{
+				background-color:red;
+			}
+			#two{
+				/*
+					position：定位
+						值：
+							① absolute：绝对定位（需要配合以下几个属性，来对当前绝对定位元素进行位置的调试）
+								top：（单位：像素）
+								left：（单位：像素）
+								right：（单位：像素）
+								bottom：（单位：像素）
+							② fixed：固定定位
+								top：（单位：像素）
+								left：（单位：像素）
+								right：（单位：像素）
+								bottom：（单位：像素）
+					z-index：z轴排序（就像把几张纸的叠加顺序进行修改一样，我们可以通过该属性修改div的叠加顺序，默认排序为0）
+				*/
+				position:fixed;
+				top:0px;
+				left:0px;
+				
+				background-color:green;
+			}
+			#three{
+				height:2000px;
+				background-color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+	</body>
+</html>

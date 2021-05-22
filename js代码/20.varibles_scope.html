@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS作用域</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script>
+			/*
+				变量的作用域
+					① 因为函数的出现，导致了变量作用域的不同
+					② 函数外定义的变量，也叫做【全局变量】，可以由外向内的进行传递，也就是函数内部可以直接使用函数外部定义的变量
+					③ 函数内定义的变量，也叫做【局部变量】，局部变量只能在函数内部使用，不能传递到函数外部
+					④ 函数内若定义一个未使用var定义的变量，则该变量的值可以传递到函数外部进行使用【不推荐】
+			*/
+			
+			//定义一个变量
+			var a = 10;
+			
+			//定义一个函数
+			function test(){
+				
+				//输出a变量
+				console.log(a);
+				
+				//嵌套函数
+				function test1(){
+					//特殊变量
+					c = 30;
+					var b = 20;
+					
+					//输出a变量
+					console.log(a);
+				}
+				
+				test1();
+			}
+			
+			test();
+			
+			//输出b变量
+			console.log(c);
+			console.log(b);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS事件：双击事件</title>
+		<meta charset='utf-8'/>
+		<style>
+			#box{
+				width:200px;
+				height:200px;
+				background:url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fku.90sjimg.com%2Felement_origin_min_pic%2F18%2F07%2F05%2F6d37e698eae667aa7677e30e59569d0c.jpg&refer=http%3A%2F%2Fku.90sjimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624176375&t=d000d435c362e00df21de7d4bbfdd413');
+				background-size:100%;
+				background-repeat:no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box"></div>
+		
+		<script>
+			//1.获取元素【事件源】
+			var box = document.getElementById('box');
+			
+			//2.添加双击事件【事件类型】
+			box.ondblclick = function(){
+				
+				//3.修改box的背景图片
+				this.style.background = "url(https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.51yuansu.com%2Fpic3%2Fcover%2F02%2F60%2F82%2F59fc299bc810b_610.jpg&refer=http%3A%2F%2Fpic.51yuansu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1624176445&t=e4ab1edca7bb1e55514f3ed9cb1bfa04)";
+				this.style.backgroundSize = '100%';
+				this.style.backgroundRepeat = 'no-repeat';
+			}
+		</script>
+	</body>
+</html>

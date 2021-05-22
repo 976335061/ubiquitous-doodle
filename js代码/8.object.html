@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS复合数据类型：对象型</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+				object：对象型
+					包含：
+						① 成员属性
+						② 成员方法
+					注意事项：内部的成员属性和成员方法都是用逗号来做分割的
+			*/
+		
+			//定义一个对象
+			var gf = {
+				
+				//定义特征 => 属性
+				name:'邓丽君',
+				sex:'女',
+				age:'28',
+				city:'中国台湾',
+				
+				//定义功能 => 方法
+				sing:function(){
+					console.log('我正在唱 - 月亮代表我的心');
+				},
+				
+				dance:function(){
+					console.log('我正在跳 - 迈克尔杰克逊的舞');
+				},
+				
+				play:function(){
+					console.log('我正在玩 - 开心消消乐');
+				},
+			};
+			
+			//查看对象信息
+			console.log(gf);
+			
+			//查看对象的具体信息
+			console.log(gf.name);	//名字
+			console.log(gf.sex);	//性别
+			console.log(gf.age);	//年龄
+			console.log(gf.city);	//城市
+			
+			//让对象去做一些事儿
+			gf.sing();	//唱歌
+			gf.dance();	//跳舞
+			gf.play();	//玩游戏
+			
+		</script>
+	</body>
+</html>

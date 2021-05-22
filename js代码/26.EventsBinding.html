@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS事件：事件的三种绑定形式</title>
+		<meta charset='utf-8'/>
+		<style>
+			#box{
+				width:200px;
+				height:200px;
+				background-color:#ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<!--通过HTML元素的事件属性方式进行绑定-->
+		<div id="box" onclick="alert('第一种事件绑定形式');"></div>
+		
+		<script>
+			//通过js获取节点后，添加事件
+			var box = document.getElementById('box');
+			box.onclick = function(){
+				alert('第二种事件绑定形式');
+			}
+			
+			//通过addEventListener方式，添加事件
+			box.addEventListener('click',function(){
+				alert('第三种事件绑定形式');
+			});
+		</script>
+	</body>
+</html>

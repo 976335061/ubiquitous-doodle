@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>网页布局真实案例</title>
+		<meta charset='utf-8'/>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			.header{
+				width:100%;
+				height:90px;
+				border-bottom:1px solid #ccc;
+			}
+			.header .header-center{
+				width:1175px;
+				height:90px;
+				margin:0px auto;
+			}
+			.header .header-center .logo{
+				width:280px;
+				height:70px;
+				margin-top:10px;
+				float:left;
+				background-color:#ccc;
+			}
+			.header .header-center .menu{
+				width:750px;
+				height:70px;
+				float:left;
+				margin-top:10px;
+				margin-left:10px;
+			}
+			.header .header-center .menu ul{
+				list-style:none;	/*去掉ul无序列表默认的小圆点*/
+			}
+			.header .header-center .menu ul li{
+				float:left;
+				margin-top:15px;
+			}
+			.header .header-center .menu ul li a{
+				color:black;
+				text-decoration:none;
+				font-size:17px;
+				line-height:40px;
+				padding:0px 20px;
+			}
+			.header .header-center .menu ul li a:hover{
+				color:red;
+			}
+			.header .header-center .search{
+				width:125px;
+				height:55px;
+				float:left;
+				margin-left:10px;
+				margin-top:10px;
+				padding-top:15px;
+				text-align:right;
+			}
+			.container{
+				width:1175px;
+				height:2000px;
+				background-color:#ddd;
+				margin:0px auto;
+			}
+			.footer{
+				width:100%;
+				height:112px;
+				padding:30px 0px;
+				background-color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-center">
+				<div class="logo">
+					<img src='https://www.17sucai.com/preview/1039908/2020-09-14/demo1/images/logo.jpg'/>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href='#'>网站首页</a></li>
+						<li><a href='#'>阵法</a></li>
+						<li><a href='#'>人物塑造</a></li>
+						<li><a href='#'>PPT教程</a></li>
+						<li><a href='#'>WPS教程</a></li>
+						<li><a href='#'>办公软件</a></li>
+						<li><a href='#'>今日特价</a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<a href='#'><img src='./放大镜.png' width='40'/></a>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		
+		</div>
+		<div class="footer">
+		
+		</div>
+	</body>
+</html>

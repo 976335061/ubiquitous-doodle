@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS数据类型转换：强制转换为布尔型数据</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//哪些情况下，哪些数据类型会强制被转换为布尔型假
+			/*
+				将来，我们如果在js当中进行判断时，遇到以下的值，都会转换布尔型假
+					1. 空字符串
+					2. 数值0 或 数值0.0
+					3. 布尔型 false
+					4. null空型
+					5. undefined未定义类型
+					6. 未定义的变量
+					7. NaN 非数字
+			*/
+			
+			//定义变量
+			var num1 = '';
+			var num2 = 0;
+			var num3 = 0.0;
+			var num4 = false;
+			var num5 = {};
+			var num6 = [];
+			var num7 = null;
+			var num8 = undefined;
+			var num9 = function(){}
+			var num10;
+			
+			//查看转换前的数据类型
+			console.log(Boolean(num1));
+			console.log(Boolean(num2));
+			console.log(Boolean(num3));
+			console.log(Boolean(num4));
+			console.log(Boolean(num5));
+			console.log(Boolean(num6));
+			console.log(Boolean(num7));
+			console.log(Boolean(num8));
+			console.log(Boolean(num9));
+			console.log(Boolean(num10));
+		</script>
+	</body>
+</html>

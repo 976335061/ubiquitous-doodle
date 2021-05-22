@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS：变量值的交换</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//使用a、b、c三个临时变量，完成a、b两个变量值的交换
+			var a = 10;
+			var b = 20;
+			var c;
+			
+			//首先，将a的10，放到c变量中
+			c = a;
+			
+			//然后，将b的20，放到a变量中
+			a = b;
+			
+			//最后，将c的10，放到b变量中
+			b = c;
+			
+			console.log(a,b);
+			
+			
+			//使用a、b两个临时变量，完成a、b两个变量值的交换
+			var a = 10;
+			var b = 12;
+			
+			a = a + b;	//22
+			b = a - b;	//10
+			a = a - b;	//12
+			
+			console.log(a,b);
+		</script>
+	</body>
+</html>
+

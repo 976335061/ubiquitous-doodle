@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3选择器 - 结构性伪类选择器</title>
+		<meta charset='utf-8'/>
+		<style>
+			/*查找ul中第n个li元素*/
+			ul li:nth-child(2){
+				color:green;
+			}
+			
+			/*查找ul中的倒数第n个li元素*/
+			ul li:nth-last-child(2){
+				color:orange;
+			}
+			
+			/*查找ul中最后一个li元素*/
+			ul li:last-child{
+				color:blue;
+			}
+			
+			/*当input标签获得焦点时会触发*/
+			input[name]:focus{
+				border:1px solid red;
+				color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		姓名：<input type='text' name='name' value=''/>
+		<ul>
+			<li>刘备</li>
+			<li>关羽</li>
+			<li>张飞</li>
+			<li>马超</li>
+			<li>黄忠</li>
+			<li>赵云</li>
+		</ul>
+	</body>
+</html>

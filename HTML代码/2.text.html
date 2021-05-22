@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML标签：行内标签 - 文本标签</title>
+		<meta charset='utf-8'/>
+		<style>
+			/* 如果某一个html标签的属性是 class，则css当中需要使用 . 来进行标注，代表了这是查找了具有 class 属性的所有标签 */
+			.one{
+				color:red;	
+			}
+			
+			/* 如果某一个html标签的属性是 id，则css当中需要使用 # 来进行标注，代表了这是查找了一个具有该 id 属性的标签 */
+			#lvliang1{
+				color:blue;
+			}
+			
+			#lvliang2{
+				color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<!--行内标签的特点：写了多个标签内容，但是都呈现在一行，通常情况下，这种标签就是行内标签-->
+			<font id="lvliang1">吕梁学院</font>
+			<br/>
+			
+			<font id="lvliang2">计算机科学与技术</font>
+			<br/>
+			
+			<b>男人就应该变强壮！</b>
+			<br/>
+			
+			<strong>男人就应该变<span class="one">强壮</span>！</strong>
+			<br/>
+			
+			<i>采菊东篱下，悠然见南山</i>
+			<br/>
+			
+			<em>采菊东篱下，悠然见<span class="one">南山</span></em>
+			<br/>
+			
+			<s>这段内容被删除了！</s>
+			<br/>
+			
+			<del>这段内容被<span class="one">删除</span>了！</del>
+			<br/>
+			
+			<u>这是一段被着重标记的内容</u>
+			<br/>
+			
+			没有任何<span class="one">特殊效果</span>的标签
+			<br/>
+			
+			<label>这是一个需要配合表单元素才能有效果的标签</label>
+		</center>
+	</body>
+</html>

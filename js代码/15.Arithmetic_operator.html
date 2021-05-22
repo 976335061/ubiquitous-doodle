@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS运算符：算数运算符</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script>
+			// + - * / % ++ --
+			var num1 = 10;
+			var num2 = -20;
+			
+			var res = num1 + num2;
+			var res = num1 - num2;
+			var res = num1 * num2;
+			var res = num1 / num2;		//总结：被除数和除数只要有一个为负数，则结果为负数，同时为负数，结果为整数
+			var res = num1 % num2;		//总结：只要被除数是负数，则运算结果就为负数
+			
+			//var num1 = 10;
+			//num1++;	// 先赋值，后++
+			//++num1;	// 先++，再赋值
+			
+			var num1 = 10;
+			var res = num1++ + ++num1 + ++num1;		//35
+			//         10		 12       13
+			//             11
+			
+			var num1 = 10;
+			var res = ++num1 + ++num1 + num1--;		//35
+			//			11       12      12
+			
+			console.log(res);
+		</script>
+	</body>
+</html>

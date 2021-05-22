@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS事件：右键事件</title>
+		<meta charset='utf-8'/>
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			#menu{
+				list-style:none;
+				border:1px solid #ccc;
+				float:left;
+				width:200px;
+				box-shadow:5px 5px 5px #eee;
+				display:none;
+				position:absolute;
+			}
+			#menu li{
+				font-size:14px;
+				padding:10px;
+				border-bottom:1px solid #ccc;
+			}
+			#menu li:hover{
+				background-color:#eee;
+				cursor:pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="menu">
+			<li id="back">返回</li>
+			<li id="go">前进</li>
+			<li>重新加载</li>
+			<li>另存为</li>
+			<li id="print">打印</li>
+			<li>投射</li>
+			<li>翻译中文</li>
+			<li>查看网页源代码</li>
+			<li style="border-bottom:none;">检查</li>
+		</ul>
+		<script>
+			//1.获取菜单元素【事件源】
+			var menu = document.getElementById('menu');
+			
+			//2.给窗体添加右键事件【事件类型】【事件对象：任何一个事件都会有一个事件对象，它时浏览器给我们的，方便进行后续操作】
+			window.oncontextmenu = function(ev){
+				
+				//3.显示我们自定义的菜单
+				menu.style.display = 'block';
+				
+				//4.获取鼠标在windows窗体上右键的x、y轴坐标
+				var x = ev.clientX;
+				var y = ev.clientY;
+				
+				//5.修改menu的left、top的值
+				menu.style.left = x+'px';
+				menu.style.top = y+'px';
+				
+				//6.阻止事件默认处理程序
+				return false;
+			}
+			
+			//7.给“返回”按钮添加返回上一页面的功能
+			var back = document.getElementById('back');
+			back.onclick = function(){
+				window.history.back(-1);	//页面往回跳转一次
+			}
+			
+			//8.给“前进”按钮添加前进到下一页面的功能
+			var go = document.getElementById('go');
+			go.onclick = function(){
+				window.history.go(+1);
+			}
+			
+			//9.给“打印机”按钮添加单击调用打印机的功能
+			var print = document.getElementById('print');
+			print.onclick = function(){
+				print();
+			}
+			
+			//7.给window窗体添加单击事件
+			window.onclick = function(){
+				menu.style.display = 'none';
+			}
+		</script>
+	</body>
+</html>

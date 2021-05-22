@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS数据类型 - 特殊数据类型</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1.null空型
+			var wallet = null;
+			var num1 = '';
+			var num2 = 0;
+			
+			console.log(typeof(num2));
+			console.log(typeof(wallet));
+			console.log(wallet==num2);
+			
+			//2.undefined未定义
+			var test;
+			
+			var bf = {
+				name:'胡歌',
+				sex:'男',
+			};
+			
+			var cars = ['汽车','自行车','独轮车'];
+			
+			console.log(test==wallet);
+			console.log(bf.age);
+			console.log(cars[3]);
+			
+			//3.function 函数型
+			var demo = function(){
+				console.log('all is well！');	//三傻大闹宝莱坞，阿米尔·汗
+			}
+			
+			console.log(typeof(demo));
+		</script>
+	</body>
+</html>

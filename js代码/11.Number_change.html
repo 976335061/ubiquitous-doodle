@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS数据类型转换：强制类型转换</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//1.将一个变量强制转换为Number数值型
+			var num1 = '123abc';
+			var num2 = 'abc123';
+			var num3 = '123456';
+			
+			//查看转换之前的变量类型
+			console.log(typeof(num1));
+			console.log(typeof(num2));
+			console.log(typeof(num3));
+			
+			//需要配合Number()函数进行转换，转换之后，需要将结果存储到新的变量
+			var num4 = Number(num1);
+			var num5 = Number(num2);
+			var num6 = Number(num3);
+			
+			//查看转换之后的结果
+			console.log(num4);	//NaN
+			console.log(num5);	//NaN
+			console.log(num6);	//123456
+			
+			//查看转换之后的变量类型
+			console.log(typeof(num4));	//Number
+			console.log(typeof(num5));	//Number
+			console.log(typeof(num6));	//Number
+			
+			
+		</script>
+	</body>
+</html>

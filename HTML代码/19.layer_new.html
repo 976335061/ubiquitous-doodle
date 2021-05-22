@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3：Layer布局</title>
+		<meta charset='utf-8'/>
+		<style>
+			#banner{
+				width:770px;
+				height:430px;
+				background-color:#ccc;
+				
+				/*
+					float：浮动，可以让块级元素横向排版
+						注意：浮动之后会浮起来，所以导致为浮动的元素可能会被覆盖
+				*/
+				float:left;
+			}
+			#news{
+				width:400px;
+				height:430px;
+				background-color:#fc0;
+				
+				float:right;
+			}
+			#one{
+				width:370px;
+				height:200px;
+				background-color:pink;
+				
+			}
+			#two{
+				width:370px;
+				height:200px;
+				background-color:greenyellow;
+				
+				/*
+					display：设置元素的显示状态
+						值：
+							① none：隐藏
+							② block：块级元素（显示）
+							③ inline：行内元素
+				*/
+				display:block;
+			}
+			#three{
+				width:370px;
+				height:200px;
+				background-color:purple;
+				
+			}
+			.clear{
+				width:1366px;
+				height:1px;
+				clear:both;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banner"></div>
+		<div id="news"></div>
+		
+		<div class="clear"></div>
+		
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+	</body>
+</html>

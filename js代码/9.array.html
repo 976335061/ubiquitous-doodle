@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS复合类型：数组类型</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//用普通变量来存储 - 飞哥的车
+			var car1 = "儿童三轮车";
+			var car2 = "飞鸽自行车";
+			var car3 = "雅迪电动车";
+			var car4 = "时风三轮车";
+			var car5 = "奥拓小破车";
+			var car6 = "奇瑞QQ";
+			var car7 = "丰田凯美瑞";
+			var car8 = "兰博基尼恩佐";
+			
+			//用数组来存储数据 - 飞哥的车
+			var cars = ['儿童三轮车','飞鸽自行车','雅迪电动车','时风三轮车','奥拓小破车','奇瑞QQ车','丰田凯美瑞','兰博基尼恩佐'];
+			
+			//查看飞哥的车
+			console.log(cars);
+			
+			//对数组元素的增删改查操作
+			
+			//增加
+			cars.push('蓝色法拉利');
+			
+			//删除
+			cars[5] = null;
+			cars[5] = undefined;
+			delete cars[5];
+			
+			//修改
+			cars[5] = '比亚迪汉';
+			
+			//查询
+			console.log(cars[1]);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script>
+			//请定义一个求得任意个数参数之和的函数
+			function sum(){
+			
+				//可以打印出一个对象信息
+				//console.log(arguments);
+				
+				//查看数组内部的参数信息
+				//console.log(arguments[0]);
+				//console.log(arguments[1]);
+				
+				//查看用户传入参数的个数
+				var res = 0;
+				for(var i=0; i<arguments.length; i++){
+					res += arguments[i];	//res = res + arguments[i];
+				}
+				
+				//将求得的结果返回到函数的调用处
+				return res;	
+			}	
+			
+			var jieguo = sum(10,20,30,40,50,60,70,80,90);
+			
+			console.log(jieguo);
+		</script>
+	</body>
+</html>

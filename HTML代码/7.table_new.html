@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>块级标签：table表格标签</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<!--
+			table：表格标签，表格种的行、列都包含在该标签中
+				属性：
+					① border：表格的边框（值：边框宽度，单位/像素）注意：外部的表格和内部单元格都会添加边框
+					② cellspacing：单元格与单元格之间的间距（单位/像素）
+					③ cellpadding：内容与单元格之间内间距（单位/像素）
+					④ align：表格的对齐方式（left、center、right）
+					⑤ width：表格的宽度（单位/像素）当table设置了整体的表格宽度，意味着内部的单元格会平分这一宽度。
+					⑥ height：表格的高度（单位/像素）当table设置了整体的表格高度，意味着内部的单元格会平分这一高度。
+					⑦ bgcolor：表格的背景颜色（单位：英文单词、十六进制、RGB三原色）（已废弃）
+					
+			caption：表格的标题
+				属性：
+					① style：方便给指定标签添加css样式的属性
+					
+			tr：表格中的一行
+				属性：
+					① align：行内容的对齐方式（left、center、right）
+					
+			th：表格中的表头（特点：加粗，居中）
+				属性：
+					① align：表头内容的对齐方式（left、center、right）
+					
+			td：表格中的单元格（特点：通常加给表格内容）
+				属性：
+					① align：单元格内容的对齐方式（left、center、right）
+					② colspan：跨列合并（单位：列）
+					③ rolspan：跨行合并（单位：行）
+					④ width：单元格的宽度（注意：这个宽度需要配合表格的整体宽度进行设置）
+					⑤ height；单元格的高度（注意：这个宽度需要配合表格的整体高度进行设置）
+		-->
+		<table border="1" cellspacing="0" cellpadding="15" align="center" width="1000" height="500" style="background-color:rgb(95,209,95);">
+			<caption style='font-size:20px;margin-bottom:10px;text-align:center;'>students info</caption>
+			<tr>
+				<th>id</th>
+				<th>name</th>
+				<th>sex</th>
+				<th>age</th>
+				<th>phone</th>
+				<th>address</th>
+			</tr>
+			<tr align='center'>
+				<td>1</td>
+				<td colspan="2">zhangsan</td>
+				<td>18</td>
+				<td>1314</td>
+				<td>shanxi</td>
+			</tr>
+			<tr align='center'>
+				<td>2</td>
+				<td>lisi</td>
+				<td>w</td>
+				<td>20</td>
+				<td>1555</td>
+				<td>shanghai</td>
+			</tr>
+			<tr align='center'>
+				<td>3</td>
+				<td>wangwu</td>
+				<td>w</td>
+				<td>22</td>
+				<td>1666</td>
+				<td rowspan="2">shenzhen</td>
+			</tr>
+			<tr align='center'>
+				<td>4</td>
+				<td>maliu</td>
+				<td>m</td>
+				<td>25</td>
+				<td>1777</td>
+			</tr>
+		</table>
+	</body>
+</html>

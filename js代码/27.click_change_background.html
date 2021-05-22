@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS单击事件：更换div背景颜色</title>
+		<meta charset='utf-8'/>
+		<style>
+			div{
+				width:200px;
+				height:200px;
+				border:1px solid #ccc;
+				float:left;
+				margin:10px;
+			}
+			#one{background-color:red;}
+			#two{background-color:green;}
+			#three{background-color:blue;}
+			#four{background-color:pink;}
+		</style>
+	</head>
+	<body>
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+		<div id="four"></div>
+		
+		<script>
+			
+			//请书写一个程序，当我们单击指定div的时候，将body的背景色修改为当前div的背景色
+			
+			//1.获取所有的div【事件源】
+			var divs = document.getElementsByTagName('div');
+			
+			for(var i=0; i<divs.length; i++){
+				
+				//2.给四个div添加单击事件【事件类型】
+				divs[i].onclick = function(){
+					
+					//获取当前div的背景色
+					var bgColor = window.getComputedStyle(this).backgroundColor;
+					
+					//修改body背景色为单击的颜色
+					var body = document.body;
+					body.style.backgroundColor = bgColor;
+					
+					//3.修改当前div的背景颜色【事件处理程序】
+					//this.style.backgroundColor = 'greenYellow';
+				}
+			}
+		/*
+			//1.找到4个对象【事件源】
+			var one = document.getElementById('one');
+			var two = document.getElementById('two');
+			var three = document.getElementById('three');
+			var four = document.getElementById('four');
+			
+			//2.添加单击事件【事件类型】
+			one.onclick = function(){
+				
+				//3.修改背景颜色【事件处理程序】
+				this.style.backgroundColor = "greenYellow";
+			}
+			
+			two.onclick = function(){
+				
+				//3.修改背景颜色【事件处理程序】
+				this.style.backgroundColor = "greenYellow";
+			}
+			
+			three.onclick = function(){
+				
+				//3.修改背景颜色【事件处理程序】
+				this.style.backgroundColor = "greenYellow";
+			}
+			
+			four.onclick = function(){
+				
+				//3.修改背景颜色【事件处理程序】
+				this.style.backgroundColor = "greenYellow";
+			}
+			*/
+		</script>
+	</body>
+</html>

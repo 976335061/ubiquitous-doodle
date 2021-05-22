@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3属性 - margin内边距 和 padding外边距</title>
+		<meta charset='utf-8'/>
+		<style>
+			*{
+				margin:0px;
+			}
+			div{
+				width:100px;
+				height:100px;
+			}
+			#one{
+				background-color:red;
+				
+				/*
+					margin：外边距，可以设置某一个元素四个边的外边距（margin-top/right/bottom/left）
+					margin-top:10px;
+					margin-right:10px;
+					margin-bottom:10px;					
+					margin-left:10px;
+				*/
+				
+				/*
+					margin:上 右 下 左;
+					margin:20px 10px 10px 20px;
+				*/
+				
+				/*
+					margin：上下 左右;
+				*/
+				margin:20px 10px;
+				border:5px solid blue;
+			}
+			#two{
+				/*
+					padding：内边距，可以设置某一个元素四个边的内边距(padding-top/right/bottom/left)
+					padding-top:10px;
+					padding-left:10px;
+					padding-right:10px;
+					padding-bottom:10px;
+				*/
+				padding:10px;	/*如果只写一个值，则代表四个边的内间距*/
+				
+				border:5px solid red;
+				
+				margin:10px;	/*如果只写一个值，则代表四个边的外间距*/
+				
+				background-color:green;
+			}
+			#three{
+				background-color:blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one"></div>
+		<div id="two"></div>
+		<div id="three"></div>
+	</body>
+</html>

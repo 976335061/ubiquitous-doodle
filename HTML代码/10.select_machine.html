@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset='utf-8'/>
+		<style>
+			/*
+				关联(关系)选择器，会涉及到一个权值的问题（特点：可以关联任何选择器类型，例如id、class、tag标签选择器）
+					id：100
+					calss：10
+					tag：1
+			*/
+			.bigbox .head .top_nav ul li{
+				border:1px solid red;
+			}
+			
+			#shouce{
+				border:1px solid blue;
+			}
+			
+			/*
+				组合选择器（特点：可以组合任何类型的选择器，例如 id、class、tag选择器）
+			*/
+			b,span,p,.top_nav,#kecheng{
+				color:green;
+			}
+			
+			/*
+				伪类选择器：
+					a:hover：鼠标移入a连接时的效果
+					a:active：鼠标点击a连接时的效果
+					a:link：链接为访问时的样式
+					a:visited：链接访问之后的样式
+			*/
+			a:link{
+				color:blue;
+			}
+			a:hover{
+				color:red;
+			}
+			a:active{
+				color:orange;
+			}
+			a:visited{
+				color:greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="head">
+				<div class="top_nav">
+					<ul>
+						<li>首页</li>
+						<li>菜鸟笔记</li>
+						<li>菜鸟工具</li>
+						<li id='shouce'>参考手册</li>
+						<li>用户笔记</li>
+						<li>测验/考试</li>
+						<li>本地书签</li>
+					</ul>
+				</div>
+				<div class="banner">
+					<img src="https://img2.baidu.com/it/u=1930997264,2637507460&fm=26&fmt=auto&gp=0.jpg"/>
+				</div>
+			</div>
+			<div class="body">
+				<div class="left">
+					<ol id="kecheng">
+						<li>html</li>
+						<li>css</li>
+						<li>javascript</li>
+						<li><a href='https://habitica.com/static/front?lang=zh#?lang=zh/'>php</a></li>
+						<li>java</li>
+						<li>bootstrap</li>
+						<li>nodejs</li>
+					</ol>
+				</div>
+				<div class="center">
+					<span>测试内容</span>
+				</div>
+				<div class="right">
+					<b>加粗了</b>
+				</div>
+			</div>
+			<div class="foot">
+				<p>Copyright © 2013-2021 菜鸟教程  runoob.com All Rights Reserved. 备案号：闽ICP备15012807号-1</p>
+			</div>
+		</div>
+	</body>
+</html>

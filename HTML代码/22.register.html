@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>学生信息管理系统 - 学生注册</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<center>
+			<h2>学生信息管理系统</h2>
+			<a href='#'> 查看列表 </a> |
+			<a href='#'> 注册信息 </a>
+			<hr/>
+			<h3>学生注册</h3>
+			<form action="#" method="post">
+				账号：<input type="text" name="username" value=""/><br/><br/>
+				密码：<input type="password" name="password" value=""/><br/><br/>
+				姓名：<input type="text" name="name" value=""/><br/><br/>
+				性别：<select name="sex" style="width:164.8px">
+							<option value="0">请选择</option>
+							<option value="m">男</option>
+							<option value="w">女</option>
+					   </select><br/><br/>
+				年龄：<input type="text" name="age" value=""/><br/><br/>
+				班级：<input type="text" name="class" value=""/><br/><br/>
+				电话：<input type="text" name="phone" value=""/><br/><br/>
+				地址：<input type="text" name="address" value=""/><br/><br/>
+				邮箱：<input type="email" name="email" value=""/><br/><br/>
+				Q  Q：<input type="text" name="qq" value=""/><br/><br/>
+				微信：<input type="text" name="wechat" value=""/><br/><br/>
+				爱好：<input type="text" name="hobby" value=""/><br/><br/>
+				<input type="hidden" name="created_at" value="2021-05-19 08:23:30"/>
+				<input type="hidden" name="ip" value="127.0.0.1"/>
+				<input type="submit" value="提交"/>
+				<input type="reset" value="重置"/>
+			</form>
+		</center>
+	</body>
+</html>

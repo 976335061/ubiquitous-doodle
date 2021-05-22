@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CSS3 选择器 - 属性选择器</title>
+		<meta charset='utf-8'/>
+		<style>
+			/*选择所有包含name属性的input标签*/
+			input[name]{
+				border:1px solid red;
+			}
+			
+			/*选择所有包含type属性，且type属性值为text的所有input标签*/
+			input[type=text]{
+				color:blue;
+			}
+			
+			/*选择所有包含name属性，且name属性开头的值为 u 的input标签*/
+			input[name^=u]{
+				color:pink;
+			}
+			
+			/*选择所有包含name属性，且name属性结尾的值为 d 的input标签*/
+			input[name$=d]{
+				color:purple;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="doAction.php" method="post">
+			账号：<input type="text" name="username" value="zhangsan" size="16" disabled="disabled"/><br/><br/>
+			密码：<input type="password" name="password" value=""/><br/><br/>
+			姓名：<input type="text" name="name" value=""/><br/><br/>
+			性别：<input type="radio" name="sex" value="man"/> 男
+				  <input type="radio" name="sex" value="woman"/> 女<br/><br/>
+			地址：<select name="address">
+					  <option value="bj">北京</option>
+					  <option value="sh">上海</option>
+					  <option value="gz">广州</option>
+					  <option value="sz">深圳</option>
+				  </select><br/><br/>
+		    爱好：<input type="checkbox" name="hobby[]" value="sports" /> 运动
+				  <input type="checkbox" name="hobby[]" value="music" /> 音乐
+				  <input type="checkbox" name="hobby[]" value="game" /> 游戏
+				  <input type="checkbox" name="hobby[]" value="reading" /> 阅读
+				  <input type="checkbox" name="hobby[]" value="travel" /> 旅行<br/><br/>
+		    头像：<input type="file" name="photo" value="" /><br/><br/>
+			简介：<textarea name="intro" rows="5" cols="30"></textarea>
+			<input type="hidden" name="created_at" value="2021-05-16 17:02:30"/>
+			<input type="hidden" name="ip" value="127.0.0.1"/><br/><br/>
+			<input type="submit" value="提交"/>
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+</html>

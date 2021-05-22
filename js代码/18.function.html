@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS函数</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script>
+			
+			/*
+				function函数：
+					① 函数必须调用才会生效
+					② 函数的调用，可以在函数声明之前，也可以在函数声明之后
+					③ 函数调用时传入的参数，叫做实参
+					④ 函数定义时写入的参数，叫做形参
+					⑤ 函数执行完毕，若直接将结果输出，则结果会被释放
+					⑥ 如果想要将函数的执行结果保存起来，就需要使用 return
+			*/
+			
+			//帮我写一个求两值之和函数【两个值可以是任意值】
+			
+			//定义变量初始值
+			var num1 = 10;
+			var num2 = 20;
+			
+			//调用函数
+			var a = sum(num1,num2);	//实参
+			
+			//求和函数
+			function sum(num1, num2){	//形参
+				
+				//存储结果的变量
+				var res = 0;
+				
+				//求和过程
+				res = num1 + num2;
+				
+				//直接输出，值无法保留
+				//console.log(res);
+				
+				//想要保留，就需要使用return将结果返回到函数调用出
+				return res;
+			}
+			
+			var b = 30;
+			console.log(a);
+			console.log(a+b);
+		</script>
+	</body>
+</html>

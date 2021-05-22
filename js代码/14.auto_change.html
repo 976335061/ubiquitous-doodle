@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS数据类型转化：自动类型转换</title>
+		<meta charset='utf-8'/>
+	</head>
+	<body>
+		<script>
+			//当我们使用不同的数据类型进行运算时，通常都会发生自动类型转换【+号两侧有任意一侧为字符串，则运算结果肯定会自动转换为字符串型】
+			var res1 = 100 + 100 + '100';	//300  200  200100
+			var res2 = '100' + 100 + 100;	//100100100
+			var res3 = 100 + '100' + 100;	//100100100
+			var res4 = 100 * '100';			//10000
+			var res5 = 100 - '100';			//0
+			var res6 = 100 / '100';			//1
+			var res7 = 100 - true;			//99
+			var res8  = 100 - null;			//100
+			var res9  = 100 - undefined;	//NaN
+			var res10 = NaN;
+
+			console.log(typeof(res1));	//自动转换为 string		
+			console.log(typeof(res2));	//自动转换为 string
+			console.log(typeof(res3));	//自动转换为 string
+			console.log(typeof(res4));	//自动转换为 number
+			console.log(typeof(res5));	//自动转换为 number
+			console.log(typeof(res6));	//自动转换为 number
+			console.log(typeof(res7));	//自动转换为 number
+			console.log(res8);	//自动转换为 number
+			console.log(res9);	//自动转换为 number
+			console.log(res9==res10);
+		</script>
+	</body>
+</html>

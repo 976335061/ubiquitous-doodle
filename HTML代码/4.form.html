@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>行内标记：form表单</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<!--
+			form：表单标签，专门用来获取用户提交的信息的
+				属性：
+					① action：提交地址，用户写完了信息，点击提交的时候提交到哪里。【通常会提交到一个PHP文件里】
+					② method：提交方式，主要是 get 和 post 
+						get：别名 显式传值，所有提交的信息都会显示在地址栏里面，相对不安全，另外提交信息的长度有限制。
+						post：别名 隐式传值，所有提交的信息都不会显示在地址栏，相对安全，另外对于信息提交的长度是根据服务器的设置而不同的。
+			input：表单项标签，它可以变身成很多种类型
+				属性：	
+					① type：类型（单行文本框、多行文本框、密码框、单选框、复选框……）
+						1> text：		单行文本框
+						2> password：	密码文本框
+						3> radio：		单选框
+						4> checkbox：	复选框
+						5> file：		文件上传域
+						6> submit：		提交按钮
+						7> reset：		重置按钮
+					② name：名称（用于区分用户提交信息的）
+					③ value：值（根据当前表单项的类型来说的）
+			select：下拉菜单
+				属性：	
+					① name：下拉项名字
+				搭配：
+					option 标签
+						属性：
+							① value：下拉项值
+			textarea：多行文本框
+				属性：
+					① name：多行文本框的名称
+					② rows：多少行
+					③ cols：多少列
+			
+		-->
+		<form action="doAction.php" method="post">
+			账号：<input type="text" name="username" value="zhangsan" size="16" disabled="disabled"/><br/><br/>
+			密码：<input type="password" name="password" value=""/><br/><br/>
+			姓名：<input type="text" name="name" value=""/><br/><br/>
+			性别：<input type="radio" name="sex" value="man"/> 男
+				  <input type="radio" name="sex" value="woman"/> 女<br/><br/>
+			地址：<select name="address">
+					  <option value="bj">北京</option>
+					  <option value="sh">上海</option>
+					  <option value="gz">广州</option>
+					  <option value="sz">深圳</option>
+				  </select><br/><br/>
+		    爱好：<input type="checkbox" name="hobby[]" value="sports" /> 运动
+				  <input type="checkbox" name="hobby[]" value="music" /> 音乐
+				  <input type="checkbox" name="hobby[]" value="game" /> 游戏
+				  <input type="checkbox" name="hobby[]" value="reading" /> 阅读
+				  <input type="checkbox" name="hobby[]" value="travel" /> 旅行<br/><br/>
+		    头像：<input type="file" name="photo" value="" /><br/><br/>
+			简介：<textarea name="intro" rows="5" cols="30"></textarea>
+			<input type="hidden" name="created_at" value="2021-05-16 17:02:30"/>
+			<input type="hidden" name="ip" value="127.0.0.1"/><br/><br/>
+			<input type="submit" value="提交"/>
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+</html>

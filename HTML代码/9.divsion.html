@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>块级标签：div 盒子标签</title>
+		<meta charset='utf-8'/>
+		<!--css的第一种用法：外链样式-->
+		<link type="text/css" rel="stylesheet" href="./9.divsion.css"/>
+		
+		<!--css的第二种用法：内联样式-->
+		<style>
+			/*#用于寻找html中使用id定义的名称*/
+			#box{
+				width:200px;
+				height:200px;
+				background-color:#ccc;
+			}
+			
+			/*用于寻找html中使用class定义的名称*/
+			.nike{
+				width:50px;
+				height:50px;
+				background-color:#fc0;
+			}
+			
+			/*通过标签名的方式进行标签查找：特点，会找到所有的同名的标签*/
+			h1{
+				color:green;
+			}
+			
+			p{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			div：盒子标签，没有任何特殊的属性，必须配合css进行样式修饰，因为没有特殊属性的特点，导致其可塑性很强，因此网页布局都是用它
+		-->
+		<div id="box"></div>
+		
+		<div class="nike"></div>
+		<div class="nike"></div>
+		<div class="nike"></div>
+		
+		<!--css的第三种方式：行内样式，内嵌样式-->
+		<div class="nike" style="width:100px;height:100px;background-color:blue;"></div>
+		
+		<h1>阿甘正传</h1>
+		<h1>阿甘正传</h1>
+		<h1>阿甘正传</h1>
+		<h1>阿甘正传</h1>
+		<p>阿甘是一个傻乎乎的，但是特别真诚，特别执着的青年</p>
+		<p>阿甘是一个傻乎乎的，但是特别真诚，特别执着的青年</p>
+		<p>阿甘是一个傻乎乎的，但是特别真诚，特别执着的青年</p>
+		<p>阿甘是一个傻乎乎的，但是特别真诚，特别执着的青年</p>
+	</body>
+</html>
